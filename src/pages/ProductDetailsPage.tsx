@@ -82,13 +82,13 @@ function ProductDetailsPage() {
       <article className="grid overflow-hidden rounded-[10px] border border-[#e8eae5] bg-white md:grid-cols-[minmax(220px,0.9fr)_1.1fr]">
         {/* PRODUCT:img */}
         <figure className="grid min-h-65 max-h-82.5 place-items-center overflow-hidden bg-[#f0f2ed] sm:min-h-75sm:max-h-none md:min-h-95">
-          {product.imageUrl && !imageFailed ? (
+          {product?.imageUrl && !imageFailed ? (
             // healthy image
             <img
               alt={product.name}
               className="size-full min-h-65 object-cover sm:min-h-75 md:min-h-95"
               onError={() => setImageFailed(true)}
-              src={product.imageUrl}
+              src={product?.imageUrl}
             />
           ) : (
             // not available image
